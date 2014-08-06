@@ -1,0 +1,24 @@
+package com.example.sqlitedemo;
+
+import android.database.sqlite.SQLiteDatabase;
+
+/**
+ * å®???°è??ä¸???¥å?£ç??ç±»å??ä»¥è??ç»?ä¸?ç®¡ç??
+ * 
+ */
+public interface Table {
+	/**
+	 * ???å»ºæ?°æ??åº????ä»£ç??
+	 */
+	void onCreate(SQLiteDatabase db);
+
+	/**
+	 * ???çº§æ?°æ??åº????ä»£ç??
+	 * */
+	void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion);
+
+	/**
+	 * ???çº§æ?°æ??åº?
+	 * */
+	public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion);
+}
